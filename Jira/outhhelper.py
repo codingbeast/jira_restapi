@@ -15,7 +15,8 @@ def get_token(request):
             return rdi_status,current_token
         else:
             rdi_status=False
-            token=refresh_token(request,current_token)
+            myoldtoken=current_token
+            token=refresh_token(request,myoldtoken)
             return rdi_status,token
     except:
         return rdi_status,rdi
