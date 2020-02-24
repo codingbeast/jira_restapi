@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Your Tasks</h1>
+<table class="table">
+  <tr>
+    <th>key</th>
+    <th>name</th>
+    <th>date</th>
+  </tr>
+
+  {% for message in issues %}
+    <tr>
+      <td>{{ message.key }}</td>
+      <td>{{ message.fields.summary }}</td>
+      <td>{{ message.fields.updated }}</td>
+    </tr>
+  {% endfor %}
+</table>
+{% endblock %}

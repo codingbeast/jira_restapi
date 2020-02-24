@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+<center><h1>valid Issue types names</h1></center>
+
+<table class="table">
+    <tr>
+      <th>key</th>
+      <th>name</th>
+    </tr>
+    {% for key, value in issuetype.items %}
+    
+        {% for name in value %}
+        <tr>
+            <td>{{ key }}</td>
+            <td>{{name}}</td>
+        </tr>
+        {% endfor %}
+    {% endfor %}
+
+  </table>
+
+
+
+{% endblock %}

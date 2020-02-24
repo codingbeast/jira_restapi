@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block content %}
+<center><h1> Create Issue</h1></center>
+
+<form class="form-horizontal" action="issueset" method="POST">
+<fieldset>
+
+<!-- Form Name -->
+<legend></legend>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectproject">Select Project</label>
+  <div class="col-md-4">
+    <select id="selectproject" name="selectproject" class="form-control" >
+      <option id="selectp" value="default">please select the project</option>
+      {% for sp in ProjectsDetails %}
+      <option id="selectp"  value="{{sp.key}}">{{sp.key}}-{{sp.name}}</option>
+      {% endfor %}
+    </select>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group" action+"issueset" method="POST">
+  <label class="col-md-4 control-label" for="summary">summary</label>  
+  <div class="col-md-4">
+  <input id="summary" name="summary" type="text" class="form-control input-md"> 
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="description">description</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="description" name="description"></textarea>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="issuetype">issuetype : Name</label>  
+  <div class="col-md-4">
+  <input id="issuetype" name="issuetype" type="text"  class="form-control input-md"> 
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-4">
+    <center><button id="submit" name="submit" class="btn btn-primary">Submit</button></center>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+
+
+
+  
+{% endblock %}

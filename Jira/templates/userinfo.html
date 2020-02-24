@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Your Projects</h1>
+<table class="table">
+  <tr>
+    <th>gid</th>
+    <th>name</th>
+    <th>Tasks View</th>
+  </tr>
+
+  {% for sp in ProjectsDetails %}
+    <tr>
+      <td>{{ sp.id }}</td>
+      <td>{{ sp.key }}</td>
+      <td>{{sp.name}}</td>
+      <td><button onclick="window.location.href='{{url}}?gid={{sp.key}}'">Click Here</button></td>
+    </tr>
+  {% endfor %}
+</table>
+{% endblock %}

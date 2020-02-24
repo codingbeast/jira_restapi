@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>Python Jira Sample</h1>
+  <p>This example shows how to get an OAuth token from Jira using the <a href="https://developer.atlassian.com/cloud/jira/service-desk/rest/" target="_blank">authorization code grant flow</a> and to use that token to make calls to the Jira APIs.</p>
+  <p>
+    <a class="btn btn-lg btn-primary" href="{{signin_url}}" role="button" id="connect-button">Connect to Jira</a>
+  </p>
+</div>
+{% endblock %}
